@@ -20,6 +20,8 @@ libmm-venc-def += -USINGLE_ENCODER_INSTANCE
 libmm-venc-def += -Werror
 libmm-venc-def += -D_ANDROID_ICS_
 libmm-venc-def += -D_MSM8974_
+libmm-venc-def += -Wno-constant-logical-operand
+libmm-venc-def += -Wno-implicit-fallthrough
 
 #ifeq ($(TARGET_BOARD_AUTO),true)
 #libmm-venc-def += -D_HW_RGBA
