@@ -1,5 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 LOCAL_DIR_PATH:= $(call my-dir)
+
+include $(CLEAR_VARS)
 LOCAL_CFLAGS := $(COMMON_CFLAGS) $(libplatformconfig-def)
 
 LOCAL_SHARED_LIBRARIES += \
@@ -19,7 +21,7 @@ LOCAL_SRC_FILES := PlatformConfig.cpp
 LOCAL_SRC_FILES += ConfigParser.cpp
 
 ####################
-ENABLE_CONFIGSTORE = true
+ENABLE_CONFIGSTORE := true
 ifeq ($(ENABLE_CONFIGSTORE),true)
 LOCAL_SRC_FILES += ConfigStore.cpp
 LOCAL_CFLAGS += -DENABLE_CONFIGSTORE
